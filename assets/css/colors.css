@@ -51,7 +51,7 @@ a:focus,
 .services-item i,
 .client-info h4,
 blockquote {
-    color: #b98d72; /* Primary color */
+    color: #2a92a3; /* Primary color */
 }
 
 .pace .pace-progress,
@@ -68,13 +68,13 @@ blockquote {
 .recent-project-carousel.owl-theme .owl-controls .owl-page span,
 .scroll-top a:link,
 .scroll-top a:visited {
-    background: #b98d72; /* Primary color */
+    background: #2a92a3; /* Primary color */
 }
 
 
 .services-item:before {
-    border-bottom-color: #b98d72; /* Primary color */
-    border-left-color: #b98d72; /* Primary color */
+    border-bottom-color: #2a92a3; /* Primary color */
+    border-left-color: #2a92a3; /* Primary color */
 }
 
 .testimonials p.speech,
@@ -82,12 +82,12 @@ blockquote {
 .scroll-top a:link,
 .scroll-top a:visited,
 blockquote {
-    border-color: #b98d72; /* Primary color */
+    border-color: #2a92a3; /* Primary color */
 }
 
 .testimonials p.speech:before {
-    border-top-color: #b98d72; /* Primary color */
-    border-left-color: #b98d72; /* Primary color */
+    border-top-color: #2a92a3; /* Primary color */
+    border-left-color: #2a92a3; /* Primary color */
 }
 
 
@@ -99,12 +99,12 @@ blockquote {
 .btn-overcolor:hover,
 .btn-overcolor:focus,
 .scroll-top a:hover {
-    border: 1px solid #a16a48; /* Hover color */
-    background: #a16a48; /* Hover color */
+    border: 1px solid #1c6870; /* Hover color */
+    background: #1c6870; /* Hover color */
 }
 
 .full-project:hover {
-    background: #a16a48; /* Hover color */
+    background: #1c6870; /* Hover color */
 }
 
 .btn-overcolor:hover{
@@ -152,7 +152,7 @@ blockquote {
 .team-member figure:hover figcaption,
 .services-item:hover,
 #cd-zoom-in, #cd-zoom-out{
-	background-color: rgba(185,141,114,0.9); /* RGBA of Primary color - opacity .9 */
+	background-color: rgba(42,146,163,0.9); /* RGBA of Primary color - opacity .9 */
 }
 
 
@@ -162,7 +162,7 @@ blockquote {
 
 footer,
 footer .copynote {
-    background: rgba(62,51,49, .97); /* Dark color/Footer color */
+    background: rgba(42,146,163, .97); /* Dark color/Footer color */
 }
 
 
@@ -171,13 +171,13 @@ footer .copynote {
 /* ---------------------------------------------- */
 
 ::-moz-selection {
-    background: rgba(185,141,114, .7); /* RGBA of Primary color - opacity .7 */
+    background: rgba(42,146,163, .7); /* RGBA of Primary color - opacity .7 */
 }
 
 ::selection {
-    background: rgba(185,141,114, .7); /* RGBA of Primary color - opacity .7 */
+    background: rgba(42,146,163,  .7); /* RGBA of Primary color - opacity .7 */
 }
 
 body {
-    webkit-tap-highlight-color: rgba(185,141,114, .7); /* RGBA of Primary color - opacity .7 */
+    webkit-tap-highlight-color: rgba(42,146,163, .7); /* RGBA of Primary color - opacity .7 */
 }
