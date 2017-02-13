@@ -3,11 +3,11 @@ header('Content-type: application/json');
 
 if($_POST)
 {
-    $to_email       = "you@yourdomain.com"; //Recipient email, Replace with own email here
-   
+    $to_email       = "site@acquaart.com"; //Recipient email, Replace with own email here
+
     //check if its an ajax request, exit if not
     if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
-       
+
         $output = json_encode(array( //create JSON data
             'type'=>'error',
             'text' => 'Sorry Request must be Ajax POST'
@@ -48,14 +48,14 @@ if($_POST)
 
     //email body
     $message_body = $message."\r\n\r\n-".$user_name."\r\n\r\nEmail : ".$user_email."\r\nPhone Number : ". $phone_number ;
-   
+
     //proceed with PHP email.
     $headers = 'From: '.$user_name.'<'.$user_email.'>'."\r\n" .
     'Reply-To: '.$user_name.'<'.$user_email.'>' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
-   
+
     $send_mail = mail($to_email, $subject, $message_body, $headers);
-   
+
     if(!$send_mail)
     {
         //If mail couldn't be sent output error. Check your PHP email configuration (if it ever happens)
