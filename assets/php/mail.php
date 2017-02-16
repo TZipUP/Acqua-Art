@@ -8,7 +8,7 @@
     $subject = "Form submission";
     $subject2 = "Copy of your form submission";
     $message = $name . " ,com número de telefone: <strong>" . $phone . "</strong> enviou a seguinte mensagem:" . "\n\n" . $_POST['message'];
-    $message2 = "Obrigado pelo contato " . $name . "\n\n Aqui está uma cópia da mensagem que você enviou para Acqua Art. \n\n" . $_POST['message'] . "\n\n  Responderemos você em breve!";
+    $message2 = "Aqui está uma cópia da mensagem que você enviou para Acqua Art! Responderemos você em breve!" . $name . "\n\n" . $_POST['message'];
 
     $headers = "From:" . $from;
     $headers2 = "From:" . $to;
