@@ -11,8 +11,8 @@
   <style type='text/css'>
   body {
   margin:0px;
-  font-family:Verdane;
-  font-size:12px;
+  font-family:Arial;
+  font-size:14px;
   color: #666666;
   }
   a{
@@ -25,11 +25,11 @@
   }
   </style>
     <html>
-        <table width='510' border='1' cellpadding='1' cellspacing='1' bgcolor='#CCCCCC'>
+        <table width='510' border='1' cellpadding='1' cellspacing='1' >
             <tr>
               <td>
   <tr>
-                 <td width='500'>Nome: $nome</td>
+                 <td width='500'>Nome: <b>$nome</b></td>
                 </tr>
                 <tr>
                   <td width='320'>E-mail: <b>$email</b></td>
@@ -38,12 +38,12 @@
                   <td width='320'>Telefone: <b>$telefone</b></td>
                 </tr>
                 <tr>
-                  <td width='320'>Mensagem: $nome</td>
+                  <td width='320'>Mensagem: <b>$mensagem</b></td>
                 </tr>
             </td>
           </tr>
           <tr>
-            <td>Este e-mail foi enviado em <b>$data_envio</b> às <b>$hora_envio</b></td>
+            <td>Este e-mail foi enviado dia <b>$data_envio</b> as <b>$hora_envio</b></td>
           </tr>
         </table>
     </html>
@@ -57,7 +57,7 @@
    // É necessário indicar que o formato do e-mail é html
    $headers  = 'MIME-Version: 1.0' . "\r\n";
        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-       $headers .= 'From: $nome <$email>';
+       $headers .= 'From: '.$nome. '<'.$email.'>';
    //$headers .= "Bcc: $EmailPadrao\r\n";
 
    $enviaremail = mail($destino, $assunto, $arquivo, $headers);
