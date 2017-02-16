@@ -27,7 +27,7 @@
     <html>
         <table width='510' border='1' cellpadding='1' cellspacing='1' >
             <tr>
-              <td>
+              <td width='500'><b>Contato por site - $data_envio $hora_envio</b></td>
   <tr>
                  <td width='500'>Nome: <b>$nome</b></td>
                 </tr>
@@ -42,16 +42,13 @@
                 </tr>
             </td>
           </tr>
-          <tr>
-            <td>Este e-mail foi enviado dia <b>$data_envio</b> as <b>$hora_envio</b></td>
-          </tr>
         </table>
     </html>
   ";
 
     // emails para quem será enviado o formulário
    $emailenviar = $email;
-   $destino = "contato@acquaart.com";
+   $destino = "tzipup@live.com";
    $assunto = "Contato pelo Site";
 
    // É necessário indicar que o formato do e-mail é html
