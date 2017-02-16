@@ -27,7 +27,7 @@
     <html>
         <table width='510' border='1' cellpadding='1' cellspacing='1' >
             <tr>
-              <td width='500'><b>Contato por site - $data_envio $hora_envio</b></td>
+              <td width='500'><b>Contato pelo site - $data_envio $hora_envio</b></td>
   <tr>
                  <td width='500'>Nome: <b>$nome</b></td>
                 </tr>
@@ -53,7 +53,7 @@
 
    // É necessário indicar que o formato do e-mail é html
    $headers  = 'MIME-Version: 1.0' . "\r\n";
-       $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+       $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
        $headers .= 'From: '.$nome. '<'.$email.'>';
    //$headers .= "Bcc: $EmailPadrao\r\n";
 
