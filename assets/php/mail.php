@@ -1,13 +1,14 @@
 <?php
+header('Content-Type: text/html; charset=UTF-8');
 
   if(isset($_POST['submit'])){
     $to = "contato@acquaart.com"; // this is your Email address
     $from = $_POST['email']; // this is the sender's Email address
     $name = $_POST['name'];
     $phone = $_POST['phone'];
-    $subject = "Form submission";
-    $subject2 = "Copy of your form submission";
-    $message = $name . " ,com número de telefone: <strong>" . $phone . "</strong> enviou a seguinte mensagem:" . "\n\n" . $_POST['message'];
+    $subject = "Formulário contato site | " . $name;
+    $subject2 = "Acqua ART | Cópia de seu contato pelo site";
+    $message = "Contato enviado pelo formulario do site \n\n De: " . $name . "\n\n Telefone: " .$phone. "\n\n Mensagem: ". $_POST['message'];
     $message2 = "Obrigado pelo contato " . $name . "\n\n Aqui está uma cópia da mensagem que você enviou para Acqua Art. \n\n" . $_POST['message'] . "\n\n  Responderemos você em breve!";
 
     $headers = "From:" . $from;
