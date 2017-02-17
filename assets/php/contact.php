@@ -1,6 +1,8 @@
 <?php
 //Variáveis
 
+  date_default_timezone_set('America/Sao_Paulo');
+
   $nome = $_POST['name'];
   $email = $_POST['email'];
   $telefone = $_POST['phone'];
