@@ -99,6 +99,5 @@
 
     header('location: http://www.acquaart.com?s=1');
 
-   }
- }
+    };
 ?>
