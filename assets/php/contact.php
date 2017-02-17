@@ -63,10 +63,8 @@
     </style>
     <html>
       <p>Olá <b>$nome</b>.</p>
-      <br>
       <p>Agradecemos o seu contato no site Acqua ART, enviado no dia $data_envio às $hora_envio:</p>
-      <br>
-      <i>$mensagem</i>
+      <p><i>$mensagem</i></p>
       <br>
       <p>Responderemos você o mais rápido possível!</p>
       <p>Essa é uma mensagem automática! Por favor não responda.</p>
