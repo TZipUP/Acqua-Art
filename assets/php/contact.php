@@ -65,7 +65,6 @@
       <p>Olá <b>$nome</b>.</p>
       <p>Agradecemos o seu contato no site Acqua ART, enviado no dia $data_envio às $hora_envio:</p>
       <p><i>$mensagem</i></p>
-      <br>
       <p>Responderemos você o mais rápido possível!</p>
       <p>Essa é uma mensagem automática! Por favor não responda.</p>
     </html>
@@ -87,7 +86,7 @@
     // SITE > USUÁRIO
     $emailenviar2 = "no_reply@acquaart.com";
     $destino2 = $email;
-    $assunto2 = "Contato pelo site | Acqua ART";
+    $assunto2 = "Contato pelo site";
 
     $headers2 = 'MIME-Version: 1.0' . "\r\n";
     $headers2.= 'Content-type: text/html; charset=UTF-8' . "\r\n";
@@ -95,7 +94,7 @@
 
     $enviaremail2 = mail($destino2, $assunto2, $arquivo2, $headers2);
 
-    header('location: http://www.acquaart.com?s=1');
+    header('location: http://www.acquaart.com');
 
     };
 ?>
