@@ -76,7 +76,7 @@
     // SITE > CONTATO
    $emailenviar = $email;
    $destino = "contato@acquaart.com";
-   $assunto = $nome . "| Contato pelo Site";
+   $assunto = $nome . " | Contato pelo Site";
 
    // É necessário indicar que o formato do e-mail é html
    $headers  = 'MIME-Version: 1.0' . "\r\n";
@@ -93,7 +93,7 @@
 
     $headers2 = 'MIME-Version: 1.0' . "\r\n";
     $headers2.= 'Content-type: text/html; charset=UTF-8' . "\r\n";
-    $headers2.= 'From: Acqua ART <no_reply@acquaart.com';
+    $headers2.= 'From: Acqua ART <no_reply@acquaart.com>';
 
     $enviaremail2 = mail($destino2, $assunto2, $arquivo2, $headers2);
 
