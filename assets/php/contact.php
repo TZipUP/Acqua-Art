@@ -26,53 +26,79 @@
   </style>
     <html>
         <table width='510' border='1' cellpadding='1' cellspacing='1' >
+          <tr>
+            <td width='500'><b>Contato pelo site - $data_envio $hora_envio</b></td>
             <tr>
-              <td width='500'><b>Contato pelo site - $data_envio $hora_envio</b></td>
-  <tr>
-                 <td width='500'>Nome: <b>$nome</b></td>
-                </tr>
-                <tr>
-                  <td width='320'>E-mail: <b>$email</b></td>
-     </tr>
-      <tr>
-                  <td width='320'>Telefone: <b>$telefone</b></td>
-                </tr>
-                <tr>
-                  <td width='320'>Mensagem: <b>$mensagem</b></td>
-                </tr>
-            </td>
+              <td width='500'>Nome: <b>$nome</b></td>
+            </tr>
+            <tr>
+              <td width='320'>E-mail: <b>$email</b></td>
+            </tr>
+            <tr>
+              <td width='320'>Telefone: <b>$telefone</b></td>
+            </tr>
+            <tr>
+              <td width='320'>Mensagem: <b>$mensagem</b></td>
+            </tr>
           </tr>
         </table>
     </html>
   ";
+  $arquivo2 = "
+    <style type='text/css'>
+      body {
+        margin:0px;
+        font-family:Arial;
+        font-size:14px;
+        color: #666666;
+      }
+      a{
+        color: #666666;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #FF0000;
+        text-decoration: none;
+      }
+    </style>
+    <html>
+      <p>Olá <b>$nome</b>.</p>
+      <br>
+      <p>Agradecemos o seu contato no site Acqua ART, enviado no dia $data_envio às $hora_envio:</p>
+      <br>
+      <i>$mensagem</i>
+      <br>
+      <p>Responderemos você o mais rápido possível!</p>
+      <p>Essa é uma mensagem automática! Por favor não responda.</p>
+    </html>
+  ";
 
-    // emails para quem será enviado o formulário
+    // SITE > CONTATO
    $emailenviar = $email;
-   $destino = "tzipup@live.com";
-   $assunto = "Contato pelo Site";
+   $destino = "contato@acquaart.com";
+   $assunto = $nome . "| Contato pelo Site";
 
    // É necessário indicar que o formato do e-mail é html
    $headers  = 'MIME-Version: 1.0' . "\r\n";
-       $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
-       $headers .= 'From: '.$nome. '<'.$email.'>';
+   $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+   $headers .= 'From: '.$nome. '<'.$email.'>';
    //$headers .= "Bcc: $EmailPadrao\r\n";
 
    $enviaremail = mail($destino, $assunto, $arquivo, $headers);
    if($enviaremail){
-   $mgm = "E-MAIL ENVIADO COM SUCESSO! <br> O link será enviado para o e-mail fornecido no formulário";
-   echo " <meta http-equiv='refresh' content='10;URL=contato.php'>";
-   } else {
-   $mgm = "ERRO AO ENVIAR E-MAIL!";
-   echo "";
+    // SITE > USUÁRIO
+    $emailenviar2 = "no_reply@acquaart.com";
+    $destino2 = $email;
+    $assunto2 = "Contato pelo site | Acqua ART";
+
+    $headers2 = 'MIME-Version: 1.0' . "\r\n";
+    $headers2.= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+    $headers2.= 'From: Acqua ART <no_reply@acquaart.com';
+
+    $enviaremail2 = mail($destino2, $assunto2, $arquivo2, $headers2);
+
+    header('location: http://www.acquaart.com?s=1');
+
+   }
  }
-
-
-
-
-
-
-
-
-
-
- ?>
+?>
